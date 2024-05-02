@@ -46,7 +46,9 @@ inputs:
   webhook:
     description: webhook URL
     required: false
-    
+  EVENT_CHECK_VARIABLE: 
+    description: MY Variable
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -63,3 +65,4 @@ runs:
     VERSION_FILE: ${{ inputs.version_file }}
     EVENT: ${{ inputs.event }}
     WEBHOOK: ${{ inputs.webhook }}
+    EVENT_CHECK_VARIABLE: ${{ inputs.EVENT_CHECK_VARIABLE }}
